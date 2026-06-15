@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Hearing Aid & Audiology Center</title>
+  <meta name="description" content="Photo gallery of our clinic, devices, and events.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css" id="dark-mode-stylesheet" disabled>
+<link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Hearing Aid &amp; Audiology Center</a>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
+      <button class="icon-btn" id="rtl-toggle" aria-label="Toggle RTL">↔️</button>
+      <button class="icon-btn hamburger" id="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <section class="container" style="padding:4rem 0;">
+    <h1>Gallery</h1>
+    <div class="cards" style="gap:1rem;">
+      <img src="assets/images/hero.png" alt="Gallery image 1" style="width:100%; border-radius:var(--border-radius);" loading="lazy" />
+      <img src="assets/images/hero.png" alt="Gallery image 2" style="width:100%; border-radius:var(--border-radius);" loading="lazy" />
+      <img src="assets/images/hero.png" alt="Gallery image 3" style="width:100%; border-radius:var(--border-radius);" loading="lazy" />
+      <img src="assets/images/hero.png" alt="Gallery image 4" style="width:100%; border-radius:var(--border-radius);" loading="lazy" />
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">Hearing Aid &amp; Audiology Center</div>
+      <div class="footer-links">
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="newsletter">
+        <h4>Stay Updated</h4>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="newsletter-form">
+          <input type="email" name="email" placeholder="Your email" required aria-label="Email address" />
+          <button type="submit" class="btn secondary">Subscribe</button>
+        </form>
+      </div>
+      <div class="bottom-bar">
+        <p>&copy; 2026 Hearing Aid &amp; Audiology Center. All rights reserved.</p>
+        <ul class="legal"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul>
+      </div>
+    </div>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

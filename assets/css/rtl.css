@@ -1,0 +1,23 @@
+/* RTL stylesheet – enables right‑to‑left layout when activated */
+
+/* The HTML element gets a `dir="rtl"` attribute via JavaScript. */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+/* Adjust Bootstrap navigation spacing for RTL */
+html[dir="rtl"] .navbar-nav .nav-link {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+/* Ensure text alignment defaults to right where appropriate */
+html[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+/* Optional: reverse utility margins/paddings if needed */
+html[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: .5rem !important; }
+html[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: .5rem !important; }
+
+/* Add any additional RTL specific overrides here */

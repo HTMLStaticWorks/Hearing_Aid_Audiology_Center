@@ -1,0 +1,6 @@
+/* dark-mode.css – Overrides for dark theme */
+[data-theme="dark"] {
+  --text: #E5E5E5;
+  --bg-light: var(--bg-dark);
+  --card-bg: var(--card-bg-dark);
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Alternative Layout</title>
+  <meta name="description" content="Alternative home page for Hearing Aid & Audiology Center.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa6Y5yZ+0t4n5wSxK5Q/73eS7mZ1Y5x8TzZV6wS8QjE4G2UeM5Rj2R+6Y4g" crossorigin="anonymous">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/dark-mode.css" rel="stylesheet" id="dark-mode-stylesheet" disabled>
+<link href="assets/css/rtl.css" rel="stylesheet" id="rtl-stylesheet" disabled>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar navbar-expand-lg sticky-top bg-white bg-opacity-75">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="logo fw-bold text-primary h4 mb-0">Hearing Aid &amp; Audiology Center</a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="collapse navbar-collapse justify-content-end" id="nav-menu">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Book</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="btn btn-link icon-btn" id="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
+        <button class="btn btn-link icon-btn" id="rtl-toggle" aria-label="Toggle RTL">↔️</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero (alternative style) -->
+  <section class="hero d-flex align-items-center justify-content-between text-white" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); min-height:80vh; padding:2rem;">
+    <div class="hero-content col-md-6">
+      <h1 class="display-4 fw-bold">Your Path to Clear Hearing</h1>
+      <p class="lead">Explore our services and schedule your first visit today.</p>
+      <div class="cta-buttons mt-4">
+        <a href="booking.html" class="btn btn-primary me-2">Book Now</a>
+        <a href="services.html" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+    <img src="assets/images/hero.png" alt="Calm adult wearing a hearing aid" class="hero-image col-md-5 d-none d-md-block" loading="lazy" style="max-width:100%; border-radius:8px; box-shadow:0 8px 16px rgba(0,0,0,0.2);">
+  </section>
+
+  <!-- Intro -->
+  <section class="py-5 bg-light text-center">
+    <div class="container"><h2 class="h3">Personalized Hearing Solutions</h2><p class="lead">Our team blends expertise with the latest technology to restore your hearing.</p></div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 mb-4"><div class="p-4 bg-white rounded-3 shadow-sm"><svg width="48" height="48" class="mb-3" fill="var(--primary)"><circle cx="24" cy="24" r="24"/></svg><h3 class="h5">Free Consultation</h3><p>Start with a no‑cost hearing assessment.</p></div></div>
+        <div class="col-md-4 mb-4"><div class="p-4 bg-white rounded-3 shadow-sm"><svg width="48" height="48" class="mb-3" fill="var(--primary)"><rect width="48" height="48"/></svg><h3 class="h5">Advanced Devices</h3><p>Choose from the latest discreet hearing aids.</p></div></div>
+        <div class="col-md-4 mb-4"><div class="p-4 bg-white rounded-3 shadow-sm"><svg width="48" height="48" class="mb-3" fill="var(--primary)"><polygon points="0,48 48,48 24,0"/></svg><h3 class="h5">Tinnitus Relief</h3><p>Effective therapies to reduce ringing.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="services-overview container py-5">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="card glass h-100"><div class="card-body text-center"><h3 class="card-title">Hearing Tests</h3><p class="card-text">Comprehensive audiometry.</p><a href="service-details.html#hearing-tests" class="link text-primary">Read More →</a></div></div></div>
+      <div class="col-md-4"><div class="card glass h-100"><div class="card-body text-center"><h3 class="card-title">Hearing Aids</h3><p class="card-text">Custom fitting options.</p><a href="service-details.html#hearing-aids" class="link text-primary">Read More →</a></div></div></div>
+      <div class="col-md-4"><div class="card glass h-100"><div class="card-body text-center"><h3 class="card-title">Tinnitus Therapy</h3><p class="card-text">Sound therapy & counseling.</p><a href="service-details.html#tinnitus-therapy" class="link text-primary">Read More →</a></div></div></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-5">
+    <div class="container"><h2 class="h3 text-center mb-4">FAQs</h2><div class="accordion" id="faqAccordion2"><div class="accordion-item"><h2 class="accordion-header" id="fhOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fhCollapseOne" aria-expanded="true" aria-controls="fhCollapseOne">How do I book?</button></h2><div id="fhCollapseOne" class="accordion-collapse collapse show" aria-labelledby="fhOne" data-bs-parent="#faqAccordion2"><div class="accordion-body">Click "Book Now" or call us.</div></div></div></div></div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-5 text-center" style="background: var(--primary); color:#fff;">
+    <div class="container"><h2 class="h3">Take the First Step to Better Hearing</h2><a href="booking.html" class="btn btn-light btn-lg mt-3">Schedule Your Free Consultation</a></div>
+  </section>
+
+  <footer class="footer bg-light py-4 mt-auto">
+    <div class="container"><div class="row"><div class="col-md-4 mb-3"><h4 class="fw-bold">Hearing Aid &amp; Audiology Center</h4></div><div class="col-md-4 mb-3"><h5>Quick Links</h5><ul class="list-unstyled"><li><a href="index.html" class="text-decoration-none">Home</a></li><li><a href="about.html" class="text-decoration-none">About</a></li><li><a href="services.html" class="text-decoration-none">Services</a></li><li><a href="contact.html" class="text-decoration-none">Contact</a></li></ul></div><div class="col-md-4 mb-3"><h5>Resources</h5><ul class="list-unstyled"><li><a href="blog.html" class="text-decoration-none">Blog</a></li><li><a href="pricing.html" class="text-decoration-none">Pricing</a></li><li><a href="gallery.html" class="text-decoration-none">Gallery</a></li></ul></div></div><div class="newsletter text-center mt-4"><h5>Stay Updated</h5><form action="https://formspree.io/f/your-form-id" method="POST" class="d-flex justify-content-center"><input type="email" name="email" placeholder="Your email" required aria-label="Email address" class="form-control w-50 me-2"><button type="submit" class="btn btn-secondary">Subscribe</button></form></div><div class="bottom-bar text-center mt-3"><p class="mb-0">&copy; 2026 Hearing Aid &amp; Audiology Center. All rights reserved.</p><ul class="list-inline"><li class="list-inline-item"><a href="#" class="text-decoration-none">Privacy Policy</a></li><li class="list-inline-item"><a href="#" class="text-decoration-none">Terms of Service</a></li></ul></div><button class="btn btn-primary back-to-top" id="back-to-top" aria-label="Back to top" style="position:fixed; right:1.5rem; bottom:1.5rem; display:none;">↑</button></div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeo5A6UO5y5l0j2Fh1f6jGxZr5JgB4U5ZL+6G4U5T8Z0p4xU" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
