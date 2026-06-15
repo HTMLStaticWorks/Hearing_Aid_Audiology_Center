@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Sono</title>
-  <meta name="description" content="Explore our comprehensive hearing tests, hearing aid options, and tinnitus therapy services.">
+  <title>Contact Us - Sono</title>
+  <meta name="description" content="Get in touch with Sono Hearing Care. Book your visit, ask questions, or find our clinics.">
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/dark-mode.css" rel="stylesheet" id="dark-mode-stylesheet" disabled>
-<link href="assets/css/rtl.css" rel="stylesheet" id="rtl-stylesheet" disabled>
+  <link href="assets/css/rtl.css" rel="stylesheet" id="rtl-stylesheet" disabled>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
   <header class="navbar navbar-expand-lg sticky-top bg-white bg-opacity-75">
     <div class="container d-flex align-items-center">
       <a href="index.html" class="logo">Sono</a>
@@ -23,9 +25,9 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
           <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0 header-actions">
           <a href="login.html" class="btn btn-secondary">Login</a>
@@ -37,133 +39,137 @@
     </div>
   </header>
 
-  <!-- Services Overview Section -->
-  <!-- Services Hero Section -->
+  <!-- Hero Section -->
   <section class="hero text-center py-5" style="min-height: auto; padding: 4rem 0 2rem;">
     <div class="container">
-      <span class="text-primary fw-bold text-uppercase tracking-wider" style="font-size: 0.85rem;">Clinical Excellence</span>
-      <h1 class="display-4 fw-bold mt-2" style="font-size: 2.75rem;">Comprehensive Hearing Care</h1>
-      <p class="lead text-muted mx-auto mt-3" style="max-width: 600px;">Explore our range of professional audiological treatments and diagnostics, customized to reconnect you with your environment.</p>
+      <span class="text-primary fw-bold text-uppercase tracking-wider" style="font-size: 0.85rem;">Connect with Us</span>
+      <h1 class="display-4 fw-bold mt-2" style="font-size: 2.75rem;">Get In Touch</h1>
+      <p class="lead text-muted mx-auto mt-3" style="max-width: 600px;">Have questions or ready to book an appointment? Select your preferred date and time below, and our team will confirm your session.</p>
     </div>
   </section>
 
-  <!-- Services Grid Section -->
-  <section class="services-overview container py-5">
-    <div class="row g-4">
-      <!-- Card 1: Hearing Tests -->
-      <div class="col-md-4">
-        <div class="card glass h-100 d-flex flex-column justify-content-between p-4">
-          <div class="text-center">
-            <div class="mb-3 d-inline-flex p-3 rounded-circle" style="background: rgba(var(--primary-rgb), 0.1);">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-              </svg>
+  <!-- Contact Grid -->
+  <section class="container py-4">
+    <div class="contact-container">
+      <!-- Left side: Contact Form -->
+      <div class="card glass p-4 glass-form" style="border-radius: 20px !important;">
+        <h2 class="h3 mb-4">Send a Message</h2>
+        <form action="#" method="POST">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" class="form-control" placeholder="John Doe" required autocomplete="name">
             </div>
-            <h3 class="card-title">Hearing Tests</h3>
-            <p class="card-text text-muted" style="font-size: 0.9rem;">Comprehensive evaluations to accurately measure and diagnose hearing capability across frequencies.</p>
-            <ul class="service-card-feature-list">
-              <li>Pure-tone audiometry</li>
-              <li>Speech understanding evaluation</li>
-              <li>Tympanometry diagnostics</li>
-              <li>Detailed consult explanation</li>
-            </ul>
-          </div>
-          <div class="text-center mt-3">
-            <a href="service-details.html#hearing-tests" class="link text-primary fw-semibold">Read More &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 2: Hearing Aids -->
-      <div class="col-md-4">
-        <div class="card glass h-100 d-flex flex-column justify-content-between p-4">
-          <div class="text-center">
-            <div class="mb-3 d-inline-flex p-3 rounded-circle" style="background: rgba(var(--secondary-rgb), 0.1);">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
-                <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"></path>
-              </svg>
+            <div class="col-md-6 form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="john@example.com" required autocomplete="email">
             </div>
-            <h3 class="card-title">Hearing Aids</h3>
-            <p class="card-text text-muted" style="font-size: 0.9rem;">Wide range of discreet, high-performance digital devices featuring smart filters and Bluetooth connectivity.</p>
-            <ul class="service-card-feature-list">
-              <li>Custom fitting & earmolds</li>
-              <li>Premium brands configuration</li>
-              <li>Bluetooth & app connectivity</li>
-              <li>Trial period and validation</li>
-            </ul>
           </div>
-          <div class="text-center mt-3">
-            <a href="service-details.html#hearing-aids" class="link text-primary fw-semibold">Read More &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 3: Tinnitus Therapy -->
-      <div class="col-md-4">
-        <div class="card glass h-100 d-flex flex-column justify-content-between p-4">
-          <div class="text-center">
-            <div class="mb-3 d-inline-flex p-3 rounded-circle" style="background: rgba(var(--primary-rgb), 0.1);">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" placeholder="(555) 000-0000" autocomplete="tel">
             </div>
-            <h3 class="card-title">Tinnitus Therapy</h3>
-            <p class="card-text text-muted" style="font-size: 0.9rem;">Evidence-based sound masking and retraining therapies to effectively suppress annoying buzzing and ringing.</p>
-            <ul class="service-card-feature-list">
-              <li>Tinnitus severity scoring</li>
-              <li>Sound therapy masking systems</li>
-              <li>Cognitive habituation counsel</li>
-              <li>Follow-up adjustment support</li>
-            </ul>
+            <div class="col-md-6 form-group">
+              <label for="service">Select Service</label>
+              <select id="service" class="form-select form-control" style="padding: 0.75rem 1rem !important;">
+                <option value="test">Hearing Test & Assessment</option>
+                <option value="aid">Hearing Aid Fitting / Repair</option>
+                <option value="tinnitus">Tinnitus Management</option>
+                <option value="other">General Inquiry</option>
+              </select>
+            </div>
           </div>
-          <div class="text-center mt-3">
-            <a href="service-details.html#tinnitus-therapy" class="link text-primary fw-semibold">Read More &rarr;</a>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" class="form-control">
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="time">Preferred Time Slot</label>
+              <select id="time" class="form-select form-control" style="padding: 0.75rem 1rem !important;">
+                <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                <option value="evening">Late Afternoon (4:00 PM - 6:00 PM)</option>
+              </select>
+            </div>
           </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="4" class="form-control" placeholder="How can we help you today? Let us know any specific symptoms or requests." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 py-3 shadow" style="border: none;">Send Inquiry / Book Appointment</button>
+        </form>
+      </div>
+
+      <!-- Right side: Details & Map -->
+      <div>
+        <div class="contact-info-card">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="h5 mb-1" style="color: var(--text);">Phone Number</h3>
+            <p class="mb-0 text-muted" style="font-size: 0.95rem;">(555) 123-4567</p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h3 class="h5 mb-1" style="color: var(--text);">Email Support</h3>
+            <p class="mb-0 text-muted" style="font-size: 0.95rem;">care@sonohearing.com</p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h3 class="h5 mb-1" style="color: var(--text);">Clinic Hours</h3>
+            <p class="mb-0 text-muted" style="font-size: 0.95rem;">Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div>
+            <h3 class="h5 mb-1" style="color: var(--text);">Main Office Address</h3>
+            <p class="mb-0 text-muted" style="font-size: 0.95rem;">123 Audiology Way, Suite 400<br>Medical City, NY 10001</p>
+          </div>
+        </div>
+
+        <!-- Embedded Map -->
+        <div class="map-container mt-4" style="border-radius: 20px !important;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.4284897984954!2d-73.98731968459383!3d40.75489797932688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1654876543210!5m2!1sen!2sus" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Clinic Location Map">
+          </iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Process Section -->
-  <section class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="h3 fw-bold mb-2">Our Process</h2>
-      <p class="text-muted mb-5 mx-auto" style="max-width: 500px;">How we support you from your first visit to long-term hearing satisfaction.</p>
-      <div class="process-flowchart">
-        <div class="process-step">
-          <div class="process-step-num">1</div>
-          <h4 class="h5 fw-bold mb-2" style="color: var(--text);">Free Screening</h4>
-          <p class="text-muted small mb-0">Book a quick consultation to determine if diagnostic tests are recommended.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-step-num">2</div>
-          <h4 class="h5 fw-bold mb-2" style="color: var(--text);">Detailed Exam</h4>
-          <p class="text-muted small mb-0">Undergo full audiology diagnostics in our sterile sound booth.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-step-num">3</div>
-          <h4 class="h5 fw-bold mb-2" style="color: var(--text);">Custom Fitting</h4>
-          <p class="text-muted small mb-0">Receive high-performance, calibrated hearing devices customized for you.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-step-num">4</div>
-          <h4 class="h5 fw-bold mb-2" style="color: var(--text);">Continuous Care</h4>
-          <p class="text-muted small mb-0">Benefit from ongoing tuning, cleanings, and digital updates.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Banner -->
-  <section class="py-5 text-center text-white" style="background: linear-gradient(135deg, var(--primary), var(--secondary)) !important; border-radius: 24px; margin: 4rem auto; width: min(90%, 1200px); box-shadow: var(--shadow-lg);">
-    <div class="container py-3">
-      <h2 class="h3 fw-bold mb-3 text-white">Experience the Sounds of Life Again</h2>
-      <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 500px;">Schedule your comprehensive assessment with our lead specialists today.</p>
-      <a href="contact.html" class="btn btn-light btn-lg text-primary fw-bold" style="padding: 0.75rem 2.5rem; border-radius: 12px; border: none; font-size: 1rem;">Schedule Appointment</a>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer class="footer bg-light py-4 mt-auto">
     <div class="container">
       <div class="row">
@@ -222,6 +228,8 @@
       <button class="btn btn-primary back-to-top" id="back-to-top" aria-label="Back to top" style="position:fixed; right:1.5rem; bottom:1.5rem; display:none;">↑</button>
     </div>
   </footer>
+
+  <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>

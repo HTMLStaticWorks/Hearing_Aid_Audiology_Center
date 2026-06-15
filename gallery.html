@@ -3,78 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - Hearing Aid & Audiology Center</title>
+  <title>Gallery - Sono</title>
   <meta name="description" content="Photo gallery of our clinic, devices, and events.">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark-mode.css" id="dark-mode-stylesheet" disabled>
-<link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
+  <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
 </head>
 <body>
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">Hearing Aid &amp; Audiology Center</a>
-      <nav class="nav-menu" id="nav-menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html">Book</a></li>
-          <li><a href="contact.html">Contact</a></li>
+  <header class="navbar navbar-expand-lg sticky-top bg-white bg-opacity-75">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="logo">Sono</a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="collapse navbar-collapse justify-content-end" id="nav-menu">
+        <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
+        <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0 header-actions">
+          <a href="login.html" class="btn btn-secondary">Login</a>
+          <a href="contact.html" class="btn btn-primary">Book Now</a>
+          <button class="btn btn-link icon-btn m-0" id="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
+          <button class="btn btn-link icon-btn m-0" id="rtl-toggle" aria-label="Toggle RTL">↔️</button>
+        </div>
       </nav>
-      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
-      <button class="icon-btn" id="rtl-toggle" aria-label="Toggle RTL">↔️</button>
-      <button class="icon-btn hamburger" id="menu-toggle" aria-label="Open menu">☰</button>
     </div>
   </header>
 
-  <section class="container" style="padding:4rem 0;">
-    <h1>Gallery</h1>
-    <div class="cards" style="gap:1rem;">
-      <img src="assets/images/hero.png" alt="Gallery image 1" style="width:100%; border-radius:var(--border-radius);" loading="lazy" />
-      <img src="assets/images/hero.png" alt="Gallery image 2" style="width:100%; border-radius:var(--border-radius);" loading="lazy" />
-      <img src="assets/images/hero.png" alt="Gallery image 3" style="width:100%; border-radius:var(--border-radius);" loading="lazy" />
-      <img src="assets/images/hero.png" alt="Gallery image 4" style="width:100%; border-radius:var(--border-radius);" loading="lazy" />
+  <!-- Hero / Introduction -->
+  <section class="container text-center" style="padding: 4rem 0 2rem;">
+    <h1 class="display-4 fw-bold">Our Gallery</h1>
+    <p class="lead text-muted mx-auto" style="max-width: 600px;">Take a virtual tour of our modern facilities, see our advanced diagnostics equipment, and explore our state-of-the-art hearing technologies.</p>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="container" style="padding-bottom: 5rem;">
+    <div class="gallery-grid">
+      <!-- Item 1 -->
+      <div class="gallery-item" data-lightbox-src="assets/images/clinic_reception.png" data-lightbox-caption="Welcome Desk & Reception Area - A calming, modern environment designed for patient comfort.">
+        <img src="assets/images/clinic_reception.png" alt="Welcome Desk & Reception Area" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Facilities</span>
+          <h3>Clinic Reception</h3>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="gallery-item" data-lightbox-src="assets/images/hearing_test.png" data-lightbox-caption="State-of-the-Art Hearing Assessment - Precise diagnostic evaluations in our sound-treated booth.">
+        <img src="assets/images/hearing_test.png" alt="State-of-the-Art Hearing Assessment" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Diagnostics</span>
+          <h3>Assessment Booth</h3>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="gallery-item" data-lightbox-src="assets/images/hearing_aid.png" data-lightbox-caption="Ultra-Discreet Digital Hearing Aid - Compact, high-performance technology tailored to your lifestyle.">
+        <img src="assets/images/hearing_aid.png" alt="Ultra-Discreet Digital Hearing Aid" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Technology</span>
+          <h3>Hearing Device</h3>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="gallery-item" data-lightbox-src="assets/images/patient_consultation.png" data-lightbox-caption="Patient Consultation & Care - Personalized recommendations and fitting by our certified experts.">
+        <img src="assets/images/patient_consultation.png" alt="Patient Consultation & Care" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Patient Care</span>
+          <h3>Expert Consultation</h3>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="gallery-item" data-lightbox-src="assets/images/hearing_technology.png" data-lightbox-caption="Audiogram & Waveform Diagnostics - In-depth data analysis to calibrate customized hearing profiles.">
+        <img src="assets/images/hearing_technology.png" alt="Audiogram & Waveform Diagnostics" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Diagnostics</span>
+          <h3>Digital Diagnostics</h3>
+        </div>
+      </div>
+      <!-- Item 6 -->
+      <div class="gallery-item" data-lightbox-src="assets/images/ear_protection.png" data-lightbox-caption="Custom Ear Protection Molds - Tailored noise reduction and swimming plugs for optimal safety.">
+        <img src="assets/images/ear_protection.png" alt="Custom Ear Protection Molds" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Protection</span>
+          <h3>Custom Hearing Molds</h3>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="footer">
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <div class="lightbox-content-wrapper">
+      <img id="lightbox-image" class="lightbox-image" src="" alt="">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-light py-4 mt-auto">
     <div class="container">
-      <div class="footer-logo">Hearing Aid &amp; Audiology Center</div>
-      <div class="footer-links">
-        <div>
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h4 class="fw-bold">Sono</h4>
+          <p class="mt-2 text-muted" style="max-width: 320px;">
+            Premium hearing care clinic offering comprehensive diagnostic evaluations, state-of-the-art hearing devices, and personalized tinnitus therapy.
+          </p>
+          <div class="d-flex gap-3 mt-3 social-icons">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-decoration-none">About</a></li>
+            <li><a href="services.html" class="text-decoration-none">Services</a></li>
+            <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
           </ul>
         </div>
-        <div>
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+        <div class="col-md-4 mb-3">
+          <h5>Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
+            <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
+            <li><a href="gallery.html" class="text-decoration-none">Gallery</a></li>
           </ul>
         </div>
       </div>
-      <div class="newsletter">
-        <h4>Stay Updated</h4>
-        <form action="https://formspree.io/f/your-form-id" method="POST" class="newsletter-form">
-          <input type="email" name="email" placeholder="Your email" required aria-label="Email address" />
-          <button type="submit" class="btn secondary">Subscribe</button>
+      <div class="newsletter text-center mt-4">
+        <h5>Stay Updated</h5>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="d-flex justify-content-center">
+          <input type="email" name="email" placeholder="Your email" required aria-label="Email address" class="form-control w-50 me-2">
+          <button type="submit" class="btn btn-secondary">Subscribe</button>
         </form>
       </div>
-      <div class="bottom-bar">
-        <p>&copy; 2026 Hearing Aid &amp; Audiology Center. All rights reserved.</p>
-        <ul class="legal"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul>
+      <div class="bottom-bar text-center mt-3">
+        <p class="mb-0">&copy; 2026 Sono. All rights reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#" class="text-decoration-none">Privacy Policy</a></li>
+          <li class="list-inline-item"><a href="#" class="text-decoration-none">Terms of Service</a></li>
+        </ul>
       </div>
+      <button class="btn btn-primary back-to-top" id="back-to-top" aria-label="Back to top" style="position:fixed; right:1.5rem; bottom:1.5rem; display:none;">↑</button>
     </div>
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
   </footer>
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

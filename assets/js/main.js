@@ -47,13 +47,15 @@ function toggleDirection() {
 function initMenu() {
   const menu = document.getElementById('nav-menu');
   const toggle = document.getElementById('menu-toggle');
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('open');
-  });
-  // Close menu when a link is clicked (mobile)
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => menu.classList.remove('open'));
-  });
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+    // Close menu when a link is clicked (mobile)
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => menu.classList.remove('open'));
+    });
+  }
 }
 
 // Back‑to‑top button
@@ -71,12 +73,58 @@ function initBackToTop() {
   });
 }
 
+// Lightbox initialization
+function initLightbox() {
+  const modal = document.getElementById('lightbox-modal');
+  if (!modal) return;
+  
+  const modalImg = document.getElementById('lightbox-image');
+  const modalCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.getElementById('lightbox-close');
+  
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      const largeSrc = item.getAttribute('data-lightbox-src') || (img ? img.src : '');
+      const captionText = item.getAttribute('data-lightbox-caption') || (img ? img.alt : '');
+      
+      if (modalImg) modalImg.src = largeSrc;
+      if (modalCaption) modalCaption.textContent = captionText;
+      
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden'; // prevent scrolling behind
+    });
+  });
+  
+  const closeModal = () => {
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+  };
+  
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target.closest('.lightbox-close')) {
+      closeModal();
+    }
+  });
+  
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
+      closeModal();
+    }
+  });
+}
+
 // Initialize all behaviours after DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initDirection();
-  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
-  document.getElementById('rtl-toggle').addEventListener('click', toggleDirection);
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+  const rtlToggle = document.getElementById('rtl-toggle');
+  if (rtlToggle) rtlToggle.addEventListener('click', toggleDirection);
   initMenu();
   initBackToTop();
+  initLightbox();
 });
