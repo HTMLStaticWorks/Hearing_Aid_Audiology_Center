@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sono - Premium Hearing Care</title>
-  <meta name="description" content="Learn about hearing loss types, device options, and tinnitus treatment. Book your first appointment today.">
+  <meta name="description"
+    content="Learn about hearing loss types, device options, and tinnitus treatment. Book your first appointment today.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom Styles -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/dark-mode.css" rel="stylesheet" id="dark-mode-stylesheet" disabled>
-<link href="assets/css/rtl.css" rel="stylesheet" id="rtl-stylesheet" disabled>
+  <link href="assets/css/rtl.css" rel="stylesheet" id="rtl-stylesheet" disabled>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -46,7 +50,7 @@
     },
     "sameAs": [
       "https://facebook.com/sonohearing",
-      "https://twitter.com/sonohearing",
+      "https://x.com/sonohearing",
       "https://instagram.com/sonohearing",
       "https://linkedin.com/company/sonohearing"
     ]
@@ -61,13 +65,14 @@
     "logo": "https://example.com/assets/images/hero.png",
     "sameAs": [
       "https://facebook.com/sonohearing",
-      "https://twitter.com/sonohearing",
+      "https://x.com/sonohearing",
       "https://instagram.com/sonohearing",
       "https://linkedin.com/company/sonohearing"
     ]
   }
   </script>
 </head>
+
 <body>
   <!-- Skip to Content Link (Accessibility) -->
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
@@ -75,20 +80,11 @@
   <header class="navbar navbar-expand-lg sticky-top bg-white bg-opacity-75">
     <div class="container d-flex align-items-center">
       <a href="index.html" class="logo">
-        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 7C6 4.23858 8.23858 2 11 2C11.5523 2 12 2.44772 12 3C12 3.55228 11.5523 4 11 4C9.34315 4 8 5.34315 8 7V13C8 14.6569 9.34315 16 11 16C11.5523 16 12 16.4477 12 17C12 17.5523 11.5523 18 11 18C8.23858 18 6 15.7614 6 13V7Z" fill="url(#gradient)"/>
-          <path d="M14 9C13.4477 9 13 9.44772 13 10C13 10.5523 13.4477 11 14 11H16C16.5523 11 17 10.5523 17 10C17 9.44772 16.5523 9 16 9H14Z" fill="url(#gradient)"/>
-          <path d="M16 10V14C16 15.1046 15.1046 16 14 16C13.4477 16 13 16.4477 13 17C13 17.5523 13.4477 18 14 18C16.2091 18 18 16.2091 18 14V10H16Z" fill="url(#gradient)"/>
-          <defs>
-            <linearGradient id="gradient" x1="6" y1="2" x2="18" y2="18" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#2563eb"/>
-              <stop offset="1" stop-color="#0d9488"/>
-            </linearGradient>
-          </defs>
-        </svg>
+        <img src="assets/images/new_logo.png" alt="Sono Logo" class="logo-icon">
         Sono
       </a>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
+        aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <nav class="collapse navbar-collapse justify-content-end" id="nav-menu">
@@ -98,6 +94,8 @@
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0 header-actions">
@@ -111,227 +109,389 @@
   </header>
   <main id="main-content">
     <!-- Hero Section (Home‑1) -->
-  <section class="hero d-flex align-items-center justify-content-between text-white" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); min-height:80vh; padding:2rem;">
-    <div class="hero-content col-md-6">
-      <h1 class="display-4 fw-bold">Better Hearing Starts Here</h1>
-      <p class="lead">Discover personalized solutions for hearing loss and tinnitus. Our experts are ready to help you take the first step.</p>
-      <div class="cta-buttons mt-4">
-        <a href="contact.html" class="btn btn-primary me-2">Book Appointment</a>
-        <a href="services.html" class="btn btn-secondary">Our Services</a>
+    <section class="hero text-white"
+      style="background: linear-gradient(135deg, var(--primary), var(--secondary)); min-height:80vh; padding: 3rem 0; display: flex; align-items: center;">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div
+            class="hero-content col-md-8 col-lg-7 d-flex flex-column align-items-center text-center mx-auto mx-md-0 pe-md-4">
+            <h1 class="hero-title display-4 fw-bold">Better Hearing Starts Here</h1>
+            <p class="lead hero-lead">Discover personalized solutions for hearing loss and tinnitus.</p>
+            <div class="cta-buttons mt-3 d-flex justify-content-center gap-2">
+              <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+              <a href="services.html" class="btn btn-secondary">Our Services</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-5 d-none d-md-block text-end">
+            <img src="assets/images/hero.png" alt="Calm adult wearing a hearing aid" class="hero-image w-100"
+              loading="lazy"
+              style="border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); border: 1px solid rgba(255, 255, 255, 0.1); max-width: 420px; margin-left: auto;">
+          </div>
+        </div>
       </div>
-    </div>
-    <img src="assets/images/hero.png" alt="Calm adult wearing a hearing aid" class="hero-image col-md-5 d-none d-md-block" loading="lazy" style="max-width:100%; border-radius:8px; box-shadow:0 8px 16px rgba(0,0,0,0.2);">
-  </section>
+    </section>
 
-  <!-- Intro Section -->
-  <section class="py-5 bg-light text-center">
-    <div class="container">
-      <h2 class="h3">Your Hearing Journey Begins With Us</h2>
-      <p class="lead">We combine state‑of‑the‑art technology with compassionate care to restore the sounds you love.</p>
-    </div>
-  </section>
+    <!-- Intro & Benefits Section -->
+    <section class="py-5 bg-light text-center">
+      <div class="container">
+        <div class="mb-5">
+          <h2 class="h3">Your Hearing Journey Begins With Us</h2>
+          <p class="lead mb-0">We combine state‑of‑the‑art technology with compassionate care to restore the sounds you
+            love.</p>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100 d-flex flex-column align-items-center">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="mb-3">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="m16 11 2 2 4-4"></path>
+              </svg>
+              <h3 class="h5">Expert Audiologists</h3>
+              <p>Certified specialists dedicated to your hearing health.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100 d-flex flex-column align-items-center">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="mb-3">
+                <path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"></path>
+                <path d="M15 8.5a2.5 2.5 0 0 0-5 0v2"></path>
+                <path d="M19 5a4.5 4.5 0 0 1 0 7"></path>
+                <path d="M22 2a8.5 8.5 0 0 1 0 13"></path>
+              </svg>
+              <h3 class="h5">Cutting‑Edge Devices</h3>
+              <p>Latest hearing aid technology with seamless connectivity.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100 d-flex flex-column align-items-center">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="mb-3">
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                </path>
+              </svg>
+              <h3 class="h5">Personalized Care</h3>
+              <p>Tailored treatment plans for every hearing profile.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Benefits Section -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <div class="bg-white p-4 rounded-3 shadow-sm h-100 d-flex flex-column align-items-center">
-            <svg width="48" height="48" class="mb-3" fill="var(--primary)"><circle cx="24" cy="24" r="24"/></svg>
-            <h3 class="h5">Expert Audiologists</h3>
-            <p>Certified specialists dedicated to your hearing health.</p>
+    <!-- Services Overview (already present) -->
+    <section class="services-overview container py-5">
+      <h2 class="text-center mb-4">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card glass h-100">
+            <div class="card-body text-center">
+              <h3 class="card-title">Hearing Tests</h3>
+              <p class="card-text">Comprehensive audiometry to assess your hearing profile.</p>
+              <a href="service-details.html#hearing-tests" class="link text-primary">Read More →</a>
+            </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="bg-white p-4 rounded-3 shadow-sm h-100 d-flex flex-column align-items-center">
-            <svg width="48" height="48" class="mb-3" fill="var(--primary)"><rect width="48" height="48"/></svg>
-            <h3 class="h5">Cutting‑Edge Devices</h3>
-            <p>Latest hearing aid technology with seamless connectivity.</p>
+        <div class="col-md-4">
+          <div class="card glass h-100">
+            <div class="card-body text-center">
+              <h3 class="card-title">Hearing Aids</h3>
+              <p class="card-text">Wide range of discreet, comfortable hearing aid options.</p>
+              <a href="service-details.html#hearing-aids" class="link text-primary">Read More →</a>
+            </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="bg-white p-4 rounded-3 shadow-sm h-100 d-flex flex-column align-items-center">
-            <svg width="48" height="48" class="mb-3" fill="var(--primary)"><polygon points="0,48 48,48 24,0"/></svg>
-            <h3 class="h5">Personalized Care</h3>
-            <p>Tailored treatment plans for every hearing profile.</p>
+        <div class="col-md-4">
+          <div class="card glass h-100">
+            <div class="card-body text-center">
+              <h3 class="card-title">Tinnitus Therapy</h3>
+              <p class="card-text">Evidence‑based treatments to alleviate ringing ears.</p>
+              <a href="service-details.html#tinnitus-therapy" class="link text-primary">Read More →</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services Overview (already present) -->
-  <section class="services-overview container py-5">
-    <h2 class="text-center mb-4">Our Services</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card glass h-100">
-          <div class="card-body text-center">
-            <h3 class="card-title">Hearing Tests</h3>
-            <p class="card-text">Comprehensive audiometry to assess your hearing profile.</p>
-            <a href="service-details.html#hearing-tests" class="link text-primary">Read More →</a>
+    <!-- Testimonials Carousel -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="h3 text-center mb-4">What Our Patients Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial-card">
+                <img src="assets/images/sarah_k.png" alt="Sarah K." class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">“The team was incredibly supportive and my new hearing aids changed my
+                  life!”</p>
+                <div class="testimonial-author">Sarah K.</div>
+                <div class="testimonial-role">Verified Patient</div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-card">
+                <img src="assets/images/mark_t.png" alt="Mark T." class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">“Professional, friendly, and the technology is top‑notch.”</p>
+                <div class="testimonial-author">Mark T.</div>
+                <div class="testimonial-role">Verified Patient</div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-card">
+                <img src="assets/images/lina_p.png" alt="Lina P." class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">“I finally enjoy quiet evenings again thanks to the tinnitus program.”</p>
+                <div class="testimonial-author">Lina P.</div>
+                <div class="testimonial-role">Tinnitus Therapy Patient</div>
+              </div>
+            </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"
+              style="filter: invert(1) grayscale(100%);"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"
+              style="filter: invert(1) grayscale(100%);"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card glass h-100">
-          <div class="card-body text-center">
-            <h3 class="card-title">Hearing Aids</h3>
-            <p class="card-text">Wide range of discreet, comfortable hearing aid options.</p>
-            <a href="service-details.html#hearing-aids" class="link text-primary">Read More →</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card glass h-100">
-          <div class="card-body text-center">
-            <h3 class="card-title">Tinnitus Therapy</h3>
-            <p class="card-text">Evidence‑based treatments to alleviate ringing ears.</p>
-            <a href="service-details.html#tinnitus-therapy" class="link text-primary">Read More →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials Carousel -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="h3 text-center mb-4">What Our Patients Say</h2>
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active text-center">
-            <p class="lead">“The team was incredibly supportive and my new hearing aids changed my life!”</p>
-            <small class="text-muted">— Sarah K.</small>
-          </div>
-          <div class="carousel-item text-center">
-            <p class="lead">“Professional, friendly, and the technology is top‑notch.”</p>
-            <small class="text-muted">— Mark T.</small>
-          </div>
-          <div class="carousel-item text-center">
-            <p class="lead">“I finally enjoy quiet evenings again thanks to the tinnitus program.”</p>
-            <small class="text-muted">— Lina P.</small>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  </section>
+    <!-- Advanced Technology Section -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="text-primary fw-bold text-uppercase tracking-wider" style="font-size: 0.85rem;">Cutting-Edge
+              Innovation</span>
+            <h2 class="display-5 fw-bold mt-2 mb-4" style="line-height: 1.2;">Advanced Technology for Better Hearing
+            </h2>
+            <p class="lead text-muted mb-4">Our clinic integrates the latest technological innovations to ensure you
+              receive the clearest, most natural sound possible, tailored to your active lifestyle.</p>
 
-  <!-- FAQ Accordion -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="h3 text-center mb-4">Frequently Asked Questions</h2>
-      <div class="accordion" id="faqAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              How do I schedule a hearing test?
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">Use the "Book Appointment" button above or call us at (555) 123‑4567.</div>
+            <div class="row g-4">
+              <!-- Feature 1 -->
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="tech-icon-wrapper text-primary bg-primary bg-opacity-10 p-2 rounded-3">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 16v-4m0-4h.01" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--text);">AI Sound Processing</h4>
+                    <p class="small text-muted mb-0">Automatically adjusts amplification based on surrounding noise
+                      levels.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Feature 2 -->
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="tech-icon-wrapper text-primary bg-primary bg-opacity-10 p-2 rounded-3">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--text);">Bluetooth Streaming</h4>
+                    <p class="small text-muted mb-0">Connects seamlessly to your smartphone, TV, and audio devices.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Feature 3 -->
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="tech-icon-wrapper text-primary bg-primary bg-opacity-10 p-2 rounded-3">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <rect x="2" y="7" width="16" height="10" rx="2" ry="2" />
+                      <path d="M22 11v2M6 7v10" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--text);">Rechargeable Battery</h4>
+                    <p class="small text-muted mb-0">Up to 24 hours of continuous usage with a single quick-charge.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Feature 4 -->
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="tech-icon-wrapper text-primary bg-primary bg-opacity-10 p-2 rounded-3">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--text);">Discreet Invisible Fit</h4>
+                    <p class="small text-muted mb-0">Custom-molded to fit deeply within your ear canal completely
+                      unseen.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              What insurance plans are accepted?
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">We accept most major insurers; please contact us for a full list.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Do you offer a warranty on hearing aids?
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">All devices come with a 12‑month warranty covering repairs and adjustments.</div>
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <div class="tech-img-bg-blur"></div>
+              <img src="assets/images/hearing_technology.png"
+                alt="Advanced audiogram and digital diagnostics tools at Sono"
+                class="img-fluid rounded-4 shadow-lg position-relative"
+                style="z-index: 2; border: 1px solid var(--card-border); max-height: 400px; width: 100%; object-fit: cover;">
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-5 text-center text-white" style="background: var(--primary);">
-    <div class="container">
-      <h2 class="h3 text-white">Ready to Hear the World Again?</h2>
-      <a href="contact.html" class="btn btn-light btn-lg mt-3">Schedule Your Free Consultation</a>
-    </div>
-  </section>
+    <!-- Last CTA Section with consultation details, operating hours, & contact details -->
+    <section class="py-5 text-white" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+      <div class="container">
+        <div class="row align-items-center g-5 text-start">
+          <div class="col-lg-6">
+            <h2 class="display-5 fw-bold text-white mb-3" style="line-height: 1.2;">Ready to Hear the World Again?</h2>
+            <p class="lead mb-4 text-white bg-opacity-90" style="opacity: 0.9;">Take the first step toward clearer
+              hearing. Schedule your risk-free, complimentary clinical consultation today with one of our certified
+              specialists.</p>
+
+            <div class="d-flex flex-wrap gap-4 mt-4">
+              <a href="contact.html" class="btn btn-light btn-lg px-4 shadow-sm"
+                style="font-weight: 600; color: var(--primary);">Schedule Free Consultation</a>
+              <a href="services.html" class="btn btn-outline-light btn-lg px-4" style="font-weight: 600;">Explore Our
+                Services</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="cta-info-box p-4 rounded-4"
+              style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+              <h3 class="h5 fw-bold text-white mb-3">Your Free Consultation Includes:</h3>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2 d-flex align-items-center gap-2">
+                  <span
+                    class="text-white bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 20px; height: 20px; font-size: 0.75rem;">✓</span>
+                  Comprehensive Audiology & Ear Evaluation
+                </li>
+                <li class="mb-2 d-flex align-items-center gap-2">
+                  <span
+                    class="text-white bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 20px; height: 20px; font-size: 0.75rem;">✓</span>
+                  Live Demonstration of Latest Hearing Devices
+                </li>
+                <li class="mb-2 d-flex align-items-center gap-2">
+                  <span
+                    class="text-white bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 20px; height: 20px; font-size: 0.75rem;">✓</span>
+                  Personalized Treatment Plan & Pricing Guide
+                </li>
+              </ul>
+
+              <hr style="border-color: rgba(255,255,255,0.2); margin: 1.5rem 0;">
+
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="small text-white-50">Clinic Hours:</div>
+                  <div class="fw-bold" style="font-size: 0.95rem;">Mon - Fri: 9:00 AM - 5:00 PM</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small text-white-50">Location:</div>
+                  <div class="fw-bold" style="font-size: 0.95rem;">123 Hearing Health Way, CA</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small text-white-50">Direct Support:</div>
+                  <div class="fw-bold" style="font-size: 0.95rem;">(555) 123-4567</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small text-white-50">Email Us:</div>
+                  <div class="fw-bold" style="font-size: 0.95rem;">support@sonohearing.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <!-- Footer -->
   <footer class="footer bg-light py-4 mt-auto">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 mb-3">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
           <a href="index.html" class="logo">
-            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 7C6 4.23858 8.23858 2 11 2C11.5523 2 12 2.44772 12 3C12 3.55228 11.5523 4 11 4C9.34315 4 8 5.34315 8 7V13C8 14.6569 9.34315 16 11 16C11.5523 16 12 16.4477 12 17C12 17.5523 11.5523 18 11 18C8.23858 18 6 15.7614 6 13V7Z" fill="url(#gradient)"/>
-              <path d="M14 9C13.4477 9 13 9.44772 13 10C13 10.5523 13.4477 11 14 11H16C16.5523 11 17 10.5523 17 10C17 9.44772 16.5523 9 16 9H14Z" fill="url(#gradient)"/>
-              <path d="M16 10V14C16 15.1046 15.1046 16 14 16C13.4477 16 13 16.4477 13 17C13 17.5523 13.4477 18 14 18C16.2091 18 18 16.2091 18 14V10H16Z" fill="url(#gradient)"/>
-              <defs>
-                <linearGradient id="gradient" x1="6" y1="2" x2="18" y2="18" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#2563eb"/>
-                  <stop offset="1" stop-color="#0d9488"/>
-                </linearGradient>
-              </defs>
-            </svg>
+            <img src="assets/images/new_logo.png" alt="Sono Logo" class="logo-icon">
             Sono
           </a>
           <p class="mt-2 text-muted" style="max-width: 320px;">
-            Premium hearing care clinic offering comprehensive diagnostic evaluations, state-of-the-art hearing devices, and personalized tinnitus therapy.
+            Premium hearing care clinic offering comprehensive diagnostic evaluations, state-of-the-art hearing devices,
+            and personalized tinnitus therapy.
           </p>
           <div class="d-flex gap-3 mt-3 social-icons">
             <a href="#" class="social-icon" aria-label="Facebook">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
+              </svg>
             </a>
-            <a href="#" class="social-icon" aria-label="Twitter">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            <a href="#" class="social-icon" aria-label="X (formerly Twitter)">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
             </a>
             <a href="#" class="social-icon" aria-label="Instagram">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
             </a>
             <a href="#" class="social-icon" aria-label="LinkedIn">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
             </a>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
             <li><a href="index.html" class="text-decoration-none">Home</a></li>
             <li><a href="about.html" class="text-decoration-none">About</a></li>
             <li><a href="services.html" class="text-decoration-none">Services</a></li>
-            <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
           </ul>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
           <h5>Resources</h5>
           <ul class="list-unstyled">
             <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
-            <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
             <li><a href="gallery.html" class="text-decoration-none">Gallery</a></li>
+            <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
           </ul>
         </div>
-      </div>
-      <div class="newsletter text-center mt-4">
-        <h5>Stay Updated</h5>
-        <form action="https://formspree.io/f/your-form-id" method="POST" class="d-flex justify-content-center">
-          <input type="email" name="email" placeholder="Your email" required aria-label="Email address" class="form-control w-50 me-2">
-          <button type="submit" class="btn btn-secondary">Subscribe</button>
-        </form>
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <h5>Stay Updated</h5>
+          <p class="text-muted" style="font-size: 0.9rem; max-width: 320px;">
+            Subscribe to our newsletter for the latest hearing health tips, news, and exclusive updates.
+          </p>
+          <form action="https://formspree.io/f/your-form-id" method="POST" class="d-flex gap-2">
+            <input type="email" name="email" placeholder="Your email address" required aria-label="Email address"
+              class="form-control" style="font-size: 0.9rem; padding: 0.6rem 1rem;">
+            <button type="submit" class="btn btn-secondary"
+              style="padding: 0.6rem 1.2rem; font-size: 0.9rem; white-space: nowrap;">Subscribe</button>
+          </form>
+        </div>
       </div>
       <div class="bottom-bar text-center mt-3">
         <p class="mb-0">&copy; 2026 Sono. All rights reserved.</p>
@@ -340,7 +500,11 @@
           <li class="list-inline-item"><a href="#" class="text-decoration-none">Terms of Service</a></li>
         </ul>
       </div>
-      <button class="btn btn-primary back-to-top" id="back-to-top" aria-label="Back to top" style="position:fixed; right:1.5rem; bottom:1.5rem; display:none;">↑</button>
+      <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
     </div>
   </footer>
 
@@ -348,4 +512,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

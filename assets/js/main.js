@@ -200,6 +200,95 @@ function initBookingForm() {
   }
 }
 
+// Before & After Slider Interactivity
+function initBeforeAfterSliders() {
+  const sliders = document.querySelectorAll('.ba-slider-container');
+  sliders.forEach(slider => {
+    const before = slider.querySelector('.ba-before');
+    const handle = slider.querySelector('.ba-slider-handle');
+    let isDragging = false;
+
+    function updateSlider(x) {
+      const rect = slider.getBoundingClientRect();
+      let pos = ((x - rect.left) / rect.width) * 100;
+      pos = Math.max(2, Math.min(98, pos));
+      before.style.clipPath = `inset(0 ${100 - pos}% 0 0)`;
+      handle.style.left = pos + '%';
+    }
+
+    slider.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      updateSlider(e.clientX);
+      e.preventDefault();
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (isDragging) updateSlider(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    // Touch support
+    slider.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      updateSlider(e.touches[0].clientX);
+    }, { passive: true });
+
+    slider.addEventListener('touchmove', (e) => {
+      if (isDragging) updateSlider(e.touches[0].clientX);
+    }, { passive: true });
+
+    slider.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+  });
+}
+
+// Scroll-triggered progress bar animations
+function initProgressBars() {
+  const progressBars = document.querySelectorAll('.ba-progress-fill');
+  if (!progressBars.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'none';
+        void entry.target.offsetWidth; // force reflow
+        entry.target.style.animation = 'baProgressGrow 1.5s 0.3s forwards cubic-bezier(0.4, 0, 0.2, 1)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  progressBars.forEach(bar => {
+    bar.style.width = '0';
+    bar.style.animation = 'none';
+    observer.observe(bar);
+  });
+}
+
+// Scroll-triggered stagger animations for cards
+function initScrollAnimations() {
+  const animatedCards = document.querySelectorAll('.ba-impact-card, .tech-feature-card');
+  if (!animatedCards.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  animatedCards.forEach(card => {
+    card.style.animationPlayState = 'paused';
+    observer.observe(card);
+  });
+}
+
 // Initialize all behaviours after DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -214,4 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPasswordToggles();
   initFormValidation();
   initBookingForm();
+  initBeforeAfterSliders();
+  initProgressBars();
+  initScrollAnimations();
 });
