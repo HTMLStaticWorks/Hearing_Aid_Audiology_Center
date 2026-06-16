@@ -13,10 +13,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Skip to Content Link (Accessibility) -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
   <!-- Header -->
   <header class="navbar navbar-expand-lg sticky-top bg-white bg-opacity-75">
     <div class="container d-flex align-items-center">
-      <a href="index.html" class="logo">Sono</a>
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 7C6 4.23858 8.23858 2 11 2C11.5523 2 12 2.44772 12 3C12 3.55228 11.5523 4 11 4C9.34315 4 8 5.34315 8 7V13C8 14.6569 9.34315 16 11 16C11.5523 16 12 16.4477 12 17C12 17.5523 11.5523 18 11 18C8.23858 18 6 15.7614 6 13V7Z" fill="url(#gradient)"/>
+          <path d="M14 9C13.4477 9 13 9.44772 13 10C13 10.5523 13.4477 11 14 11H16C16.5523 11 17 10.5523 17 10C17 9.44772 16.5523 9 16 9H14Z" fill="url(#gradient)"/>
+          <path d="M16 10V14C16 15.1046 15.1046 16 14 16C13.4477 16 13 16.4477 13 17C13 17.5523 13.4477 18 14 18C16.2091 18 18 16.2091 18 14V10H16Z" fill="url(#gradient)"/>
+          <defs>
+            <linearGradient id="gradient" x1="6" y1="2" x2="18" y2="18" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#2563eb"/>
+              <stop offset="1" stop-color="#0d9488"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        Sono
+      </a>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,7 +53,7 @@
       </nav>
     </div>
   </header>
-
+  <main id="main-content">
   <!-- Hero Section -->
   <section class="hero text-center py-5" style="min-height: auto; padding: 4rem 0 2rem;">
     <div class="container">
@@ -168,13 +183,26 @@
       </div>
     </div>
   </section>
-
+  </main>
   <!-- Footer -->
   <footer class="footer bg-light py-4 mt-auto">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-3">
-          <h4 class="fw-bold">Sono</h4>
+          <a href="index.html" class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 7C6 4.23858 8.23858 2 11 2C11.5523 2 12 2.44772 12 3C12 3.55228 11.5523 4 11 4C9.34315 4 8 5.34315 8 7V13C8 14.6569 9.34315 16 11 16C11.5523 16 12 16.4477 12 17C12 17.5523 11.5523 18 11 18C8.23858 18 6 15.7614 6 13V7Z" fill="url(#gradient)"/>
+              <path d="M14 9C13.4477 9 13 9.44772 13 10C13 10.5523 13.4477 11 14 11H16C16.5523 11 17 10.5523 17 10C17 9.44772 16.5523 9 16 9H14Z" fill="url(#gradient)"/>
+              <path d="M16 10V14C16 15.1046 15.1046 16 14 16C13.4477 16 13 16.4477 13 17C13 17.5523 13.4477 18 14 18C16.2091 18 18 16.2091 18 14V10H16Z" fill="url(#gradient)"/>
+              <defs>
+                <linearGradient id="gradient" x1="6" y1="2" x2="18" y2="18" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#2563eb"/>
+                  <stop offset="1" stop-color="#0d9488"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            Sono
+          </a>
           <p class="mt-2 text-muted" style="max-width: 320px;">
             Premium hearing care clinic offering comprehensive diagnostic evaluations, state-of-the-art hearing devices, and personalized tinnitus therapy.
           </p>

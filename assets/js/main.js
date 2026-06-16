@@ -1,13 +1,14 @@
-// assets/js/main.js – Handles theme, RTL, menu, and back‑to‑top
+// assets/js/main.js – Handles theme, RTL, menu, back-to-top, auth features, and validation
 // <link href="assets/css/dark-mode.css" rel="stylesheet" id="dark-mode-stylesheet" disabled>
-// <link href="assets/css/rtl.css" rel="stylesheet" id="rtl-stylesheet" disabled> back‑to‑top
+// <link href="assets/css/rtl.css" rel="stylesheet" id="rtl-stylesheet" disabled> back-to-top
 
 // Utility to set data attribute and persist in localStorage
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
-  document.getElementById('theme-toggle').textContent = theme === 'dark' ? '☀️' : '🌙';
-  // Enable/disable dark‑mode stylesheet
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+  // Enable/disable dark-mode stylesheet
   const dmLink = document.getElementById('dark-mode-stylesheet');
   if (dmLink) dmLink.disabled = (theme !== 'dark');
 }
@@ -27,7 +28,8 @@ function toggleTheme() {
 function setDirection(dir) {
   document.documentElement.setAttribute('dir', dir);
   localStorage.setItem('dir', dir);
-  document.getElementById('rtl-toggle').textContent = dir === 'rtl' ? 'LTR' : 'RTL';
+  const rtlToggle = document.getElementById('rtl-toggle');
+  if (rtlToggle) rtlToggle.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
   // Enable/disable RTL stylesheet
   const rtlLink = document.getElementById('rtl-stylesheet');
   if (rtlLink) rtlLink.disabled = (dir !== 'rtl');
@@ -43,7 +45,7 @@ function toggleDirection() {
   setDirection(current === 'ltr' ? 'rtl' : 'ltr');
 }
 
-// Off‑canvas menu for small screens
+// Off-canvas menu for small screens
 function initMenu() {
   const menu = document.getElementById('nav-menu');
   const toggle = document.getElementById('menu-toggle');
@@ -58,19 +60,21 @@ function initMenu() {
   }
 }
 
-// Back‑to‑top button
+// Back-to-top button
 function initBackToTop() {
   const btn = document.getElementById('back-to-top');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      btn.classList.add('show');
-    } else {
-      btn.classList.remove('show');
-    }
-  });
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (btn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        btn.classList.add('show');
+      } else {
+        btn.classList.remove('show');
+      }
+    });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 }
 
 // Lightbox initialization
@@ -116,6 +120,86 @@ function initLightbox() {
   });
 }
 
+// Password visibility toggles
+function initPasswordToggles() {
+  const toggleBtns = document.querySelectorAll('.password-toggle-btn');
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const inputId = btn.getAttribute('data-target');
+      const input = document.getElementById(inputId);
+      if (input) {
+        const isPassword = input.type === 'password';
+        input.type = isPassword ? 'text' : 'password';
+        btn.textContent = isPassword ? '🙈' : '👁️';
+        btn.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+      }
+    });
+  });
+}
+
+// Form validation with tooltips
+function initFormValidation() {
+  const forms = document.querySelectorAll('form');
+  forms.forEach(form => {
+    // Validate on submit
+    form.addEventListener('submit', (e) => {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    });
+
+    // Validate individual fields on blur and input
+    const inputs = form.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => validateField(input));
+      input.addEventListener('input', () => {
+        if (input.classList.contains('is-invalid') || input.classList.contains('is-valid')) {
+          validateField(input);
+        }
+      });
+    });
+  });
+}
+
+function validateField(input) {
+  const isValid = input.checkValidity();
+  
+  if (isValid) {
+    input.classList.remove('is-invalid');
+    input.classList.add('is-valid');
+    // Remove any existing tooltip
+    const existingTooltip = input.parentElement.querySelector('.invalid-tooltip');
+    if (existingTooltip) existingTooltip.remove();
+  } else {
+    input.classList.remove('is-valid');
+    input.classList.add('is-invalid');
+    
+    // Create tooltip if it doesn't exist
+    let tooltip = input.parentElement.querySelector('.invalid-tooltip');
+    if (!tooltip) {
+      tooltip = document.createElement('div');
+      tooltip.className = 'invalid-tooltip';
+      input.parentElement.appendChild(tooltip);
+    }
+    tooltip.textContent = input.validationMessage || 'Please fill out this field.';
+  }
+}
+
+// Booking form initialization
+function initBookingForm() {
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    // Set minimum date to today
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    dateInput.min = `${yyyy}-${mm}-${dd}`;
+  }
+}
+
 // Initialize all behaviours after DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -127,4 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initBackToTop();
   initLightbox();
+  initPasswordToggles();
+  initFormValidation();
+  initBookingForm();
 });

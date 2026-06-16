@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - Sono</title>
-  <meta name="description" content="Photo gallery of our clinic, devices, and events.">
-  <!-- Bootstrap 5 CSS -->
+  <title>404 - Page Not Found | Sono</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Let's get you back on track.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/dark-mode.css" rel="stylesheet" id="dark-mode-stylesheet" disabled>
+  <link href="assets/css/rtl.css" rel="stylesheet" id="rtl-stylesheet" disabled>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/dark-mode.css" id="dark-mode-stylesheet" disabled>
-  <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
 </head>
-<body>
+<body class="min-vh-100 d-flex flex-column">
   <header class="navbar navbar-expand-lg sticky-top bg-white bg-opacity-75">
     <div class="container d-flex align-items-center">
       <a href="index.html" class="logo">
@@ -38,7 +37,8 @@
           <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0 header-actions">
@@ -51,76 +51,20 @@
     </div>
   </header>
 
-  <!-- Hero / Introduction -->
-  <section class="container text-center" style="padding: 4rem 0 2rem;">
-    <h1 class="display-4 fw-bold">Our Gallery</h1>
-    <p class="lead text-muted mx-auto" style="max-width: 600px;">Take a virtual tour of our modern facilities, see our advanced diagnostics equipment, and explore our state-of-the-art hearing technologies.</p>
-  </section>
-
-  <!-- Gallery Grid -->
-  <section class="container" style="padding-bottom: 5rem;">
-    <div class="gallery-grid">
-      <!-- Item 1 -->
-      <div class="gallery-item" data-lightbox-src="assets/images/clinic_reception.png" data-lightbox-caption="Welcome Desk & Reception Area - A calming, modern environment designed for patient comfort.">
-        <img src="assets/images/clinic_reception.png" alt="Welcome Desk & Reception Area" loading="lazy">
-        <div class="gallery-overlay">
-          <span>Facilities</span>
-          <h3>Clinic Reception</h3>
-        </div>
-      </div>
-      <!-- Item 2 -->
-      <div class="gallery-item" data-lightbox-src="assets/images/hearing_test.png" data-lightbox-caption="State-of-the-Art Hearing Assessment - Precise diagnostic evaluations in our sound-treated booth.">
-        <img src="assets/images/hearing_test.png" alt="State-of-the-Art Hearing Assessment" loading="lazy">
-        <div class="gallery-overlay">
-          <span>Diagnostics</span>
-          <h3>Assessment Booth</h3>
-        </div>
-      </div>
-      <!-- Item 3 -->
-      <div class="gallery-item" data-lightbox-src="assets/images/hearing_aid.png" data-lightbox-caption="Ultra-Discreet Digital Hearing Aid - Compact, high-performance technology tailored to your lifestyle.">
-        <img src="assets/images/hearing_aid.png" alt="Ultra-Discreet Digital Hearing Aid" loading="lazy">
-        <div class="gallery-overlay">
-          <span>Technology</span>
-          <h3>Hearing Device</h3>
-        </div>
-      </div>
-      <!-- Item 4 -->
-      <div class="gallery-item" data-lightbox-src="assets/images/patient_consultation.png" data-lightbox-caption="Patient Consultation & Care - Personalized recommendations and fitting by our certified experts.">
-        <img src="assets/images/patient_consultation.png" alt="Patient Consultation & Care" loading="lazy">
-        <div class="gallery-overlay">
-          <span>Patient Care</span>
-          <h3>Expert Consultation</h3>
-        </div>
-      </div>
-      <!-- Item 5 -->
-      <div class="gallery-item" data-lightbox-src="assets/images/hearing_technology.png" data-lightbox-caption="Audiogram & Waveform Diagnostics - In-depth data analysis to calibrate customized hearing profiles.">
-        <img src="assets/images/hearing_technology.png" alt="Audiogram & Waveform Diagnostics" loading="lazy">
-        <div class="gallery-overlay">
-          <span>Diagnostics</span>
-          <h3>Digital Diagnostics</h3>
-        </div>
-      </div>
-      <!-- Item 6 -->
-      <div class="gallery-item" data-lightbox-src="assets/images/ear_protection.png" data-lightbox-caption="Custom Ear Protection Molds - Tailored noise reduction and swimming plugs for optimal safety.">
-        <img src="assets/images/ear_protection.png" alt="Custom Ear Protection Molds" loading="lazy">
-        <div class="gallery-overlay">
-          <span>Protection</span>
-          <h3>Custom Hearing Molds</h3>
+  <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
+    <div class="container text-center">
+      <div class="max-w-md mx-auto">
+        <h1 class="mb-4">404</h1>
+        <h2 class="mb-3">Page Not Found</h2>
+        <p class="text-muted mb-6">Oops! The page you're looking for doesn't exist or has been moved.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="index.html" class="btn btn-primary">Back to Home</a>
+          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
         </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Lightbox Modal -->
-  <div id="lightbox-modal" class="lightbox-modal">
-    <button id="lightbox-close" class="lightbox-close" aria-label="Close Lightbox">&times;</button>
-    <div class="lightbox-content-wrapper">
-      <img id="lightbox-image" class="lightbox-image" src="" alt="">
-      <div id="lightbox-caption" class="lightbox-caption"></div>
-    </div>
-  </div>
-
-  <!-- Footer -->
   <footer class="footer bg-light py-4 mt-auto">
     <div class="container">
       <div class="row">
@@ -192,7 +136,6 @@
       <button class="btn btn-primary back-to-top" id="back-to-top" aria-label="Back to top" style="position:fixed; right:1.5rem; bottom:1.5rem; display:none;">↑</button>
     </div>
   </footer>
-  <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
