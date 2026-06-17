@@ -3,4 +3,65 @@
   --text: #E5E5E5;
   --bg-light: var(--bg-dark);
   --card-bg: var(--card-bg-dark);
+  --bs-body-color: #E5E5E5;
+  --bs-heading-color: #E5E5E5;
+}
+
+[data-theme="dark"] body {
+  color: var(--text);
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
+  color: var(--text);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: var(--card-bg);
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1; /* Firefox overrides */
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  background-color: var(--card-bg);
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] label {
+  color: var(--text);
+}
+
+/* Accordion Dark Mode Fixes */
+[data-theme="dark"] .accordion-button {
+  color: var(--text);
+  background-color: transparent;
+}
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  color: var(--text);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+[data-theme="dark"] .accordion-button::after {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+[data-theme="dark"] .accordion-item {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+[data-theme="dark"] .accordion-body {
+  color: var(--text);
+}
+
+/* Hamburger Dark Mode Fixes */
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+[data-theme="dark"] .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
 }

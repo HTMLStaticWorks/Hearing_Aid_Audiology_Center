@@ -40,7 +40,6 @@
         </ul>
         <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0 header-actions">
           <a href="login.html" class="btn btn-secondary">Login</a>
-          <a href="contact.html" class="btn btn-primary">Book Now</a>
           <button class="btn btn-link icon-btn m-0" id="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
           <button class="btn btn-link icon-btn m-0" id="rtl-toggle" aria-label="Toggle RTL">↔️</button>
         </div>
@@ -58,14 +57,28 @@
     </div>
   </section>
 
+  <!-- Categories Section -->
+  <section class="py-4 bg-white border-bottom">
+    <div class="container text-center">
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="btn btn-primary rounded-pill px-4">All Posts</a>
+        <a href="#" class="btn btn-outline-primary rounded-pill px-4">Hearing Health</a>
+        <a href="#" class="btn btn-outline-primary rounded-pill px-4">Technology</a>
+        <a href="#" class="btn btn-outline-primary rounded-pill px-4">Tinnitus</a>
+        <a href="#" class="btn btn-outline-primary rounded-pill px-4">Prevention</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Blog Grid -->
   <section class="py-5 bg-light">
     <div class="container">
       <div class="row g-4">
         <!-- Blog Card 1 -->
         <div class="col-md-6 col-lg-4">
-          <div class="card glass h-100">
-            <div class="p-4">
+          <div class="card glass h-100 overflow-hidden">
+            <img src="assets/images/hearing_test.png" class="card-img-top" alt="Understanding Early Signs of Hearing Loss" style="object-fit: cover; height: 200px; width: 100%;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
               <div class="d-flex gap-2 mb-3">
                 <span class="badge bg-primary text-white rounded-pill px-3 py-1" style="font-size: 0.75rem;">Hearing
                   Health</span>
@@ -74,17 +87,20 @@
               <h3 class="h4 fw-bold mb-2">Understanding Early Signs of Hearing Loss</h3>
               <p class="text-muted mb-3">Recognize subtle indicators that might signal the need for a professional
                 hearing evaluation.</p>
-              <a href="blog-details.html"
-                class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
-                  class="ms-1">→</span></a>
+              <div class="mt-auto text-center">
+                <a href="blog-details.html"
+                  class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
+                    class="ms-1">→</span></a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Blog Card 2 -->
         <div class="col-md-6 col-lg-4">
-          <div class="card glass h-100">
-            <div class="p-4">
+          <div class="card glass h-100 overflow-hidden">
+            <img src="assets/images/hearing_technology.png" class="card-img-top" alt="The Evolution of Digital Hearing Aids" style="object-fit: cover; height: 200px; width: 100%;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
               <div class="d-flex gap-2 mb-3">
                 <span class="badge bg-secondary text-white rounded-pill px-3 py-1"
                   style="font-size: 0.75rem;">Technology</span>
@@ -93,17 +109,20 @@
               <h3 class="h4 fw-bold mb-2">The Evolution of Digital Hearing Aids</h3>
               <p class="text-muted mb-3">From basic amplification to AI-powered sound processing - how technology has
                 transformed hearing care.</p>
-              <a href="blog-details.html"
-                class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
-                  class="ms-1">→</span></a>
+              <div class="mt-auto text-center">
+                <a href="blog-details.html"
+                  class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
+                    class="ms-1">→</span></a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Blog Card 3 -->
         <div class="col-md-6 col-lg-4">
-          <div class="card glass h-100">
-            <div class="p-4">
+          <div class="card glass h-100 overflow-hidden">
+            <img src="assets/images/patient_consultation.png" class="card-img-top" alt="Living Well with Tinnitus: Practical Tips" style="object-fit: cover; height: 200px; width: 100%;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
               <div class="d-flex gap-2 mb-3">
                 <span class="badge bg-primary text-white rounded-pill px-3 py-1"
                   style="font-size: 0.75rem;">Tinnitus</span>
@@ -112,17 +131,20 @@
               <h3 class="h4 fw-bold mb-2">Living Well with Tinnitus: Practical Tips</h3>
               <p class="text-muted mb-3">Evidence-based strategies to manage and reduce the impact of tinnitus on daily
                 life.</p>
-              <a href="blog-details.html"
-                class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
-                  class="ms-1">→</span></a>
+              <div class="mt-auto text-center">
+                <a href="blog-details.html"
+                  class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
+                    class="ms-1">→</span></a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Blog Card 4 -->
         <div class="col-md-6 col-lg-4">
-          <div class="card glass h-100">
-            <div class="p-4">
+          <div class="card glass h-100 overflow-hidden">
+            <img src="assets/images/ear_protection.png" class="card-img-top" alt="Protecting Your Hearing in Noisy Environments" style="object-fit: cover; height: 200px; width: 100%;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
               <div class="d-flex gap-2 mb-3">
                 <span class="badge bg-secondary text-white rounded-pill px-3 py-1"
                   style="font-size: 0.75rem;">Prevention</span>
@@ -131,17 +153,20 @@
               <h3 class="h4 fw-bold mb-2">Protecting Your Hearing in Noisy Environments</h3>
               <p class="text-muted mb-3">Essential tips for preventing noise-induced hearing loss at work, concerts, and
                 home.</p>
-              <a href="blog-details.html"
-                class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
-                  class="ms-1">→</span></a>
+              <div class="mt-auto text-center">
+                <a href="blog-details.html"
+                  class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
+                    class="ms-1">→</span></a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Blog Card 5 -->
         <div class="col-md-6 col-lg-4">
-          <div class="card glass h-100">
-            <div class="p-4">
+          <div class="card glass h-100 overflow-hidden">
+            <img src="assets/images/hearing_aid.png" class="card-img-top" alt="Maintaining Your Hearing Aids: Complete Guide" style="object-fit: cover; height: 200px; width: 100%;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
               <div class="d-flex gap-2 mb-3">
                 <span class="badge bg-primary text-white rounded-pill px-3 py-1" style="font-size: 0.75rem;">Care</span>
                 <span class="text-muted small">Apr 20, 2026</span>
@@ -149,17 +174,20 @@
               <h3 class="h4 fw-bold mb-2">Maintaining Your Hearing Aids: Complete Guide</h3>
               <p class="text-muted mb-3">Simple daily routines to keep your devices working optimally for years to come.
               </p>
-              <a href="blog-details.html"
-                class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
-                  class="ms-1">→</span></a>
+              <div class="mt-auto text-center">
+                <a href="blog-details.html"
+                  class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
+                    class="ms-1">→</span></a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Blog Card 6 -->
         <div class="col-md-6 col-lg-4">
-          <div class="card glass h-100">
-            <div class="p-4">
+          <div class="card glass h-100 overflow-hidden">
+            <img src="assets/images/clinic_reception.png" class="card-img-top" alt="The Link Between Hearing and Cognitive Health" style="object-fit: cover; height: 200px; width: 100%;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
               <div class="d-flex gap-2 mb-3">
                 <span class="badge bg-secondary text-white rounded-pill px-3 py-1"
                   style="font-size: 0.75rem;">Wellness</span>
@@ -168,9 +196,11 @@
               <h3 class="h4 fw-bold mb-2">The Link Between Hearing and Cognitive Health</h3>
               <p class="text-muted mb-3">Exploring research connecting untreated hearing loss to cognitive decline and
                 dementia risk.</p>
-              <a href="blog-details.html"
-                class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
-                  class="ms-1">→</span></a>
+              <div class="mt-auto text-center">
+                <a href="blog-details.html"
+                  class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center">Read More <span
+                    class="ms-1">→</span></a>
+              </div>
             </div>
           </div>
         </div>

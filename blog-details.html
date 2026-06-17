@@ -40,7 +40,6 @@
         </ul>
         <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0 header-actions">
           <a href="login.html" class="btn btn-secondary">Login</a>
-          <a href="contact.html" class="btn btn-primary">Book Now</a>
           <button class="btn btn-link icon-btn m-0" id="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
           <button class="btn btn-link icon-btn m-0" id="rtl-toggle" aria-label="Toggle RTL">↔️</button>
         </div>
@@ -50,9 +49,9 @@
 
   <!-- Blog Post Hero -->
   <section class="container py-5 text-center">
-    <a href="blog.html" class="text-decoration-none d-inline-flex align-items-center mb-4 text-muted">
+    <!-- <a href="blog.html" class="text-decoration-none d-inline-flex align-items-center mb-4 text-muted">
       <span class="me-2">←</span> Back to Blog
-    </a>
+    </a> -->
     <div class="max-w-3xl mx-auto">
       <div class="d-flex gap-3 mb-4 align-items-center justify-content-center flex-wrap">
         <span class="badge bg-primary text-white rounded-pill px-3 py-1">Hearing Health</span>
@@ -111,20 +110,28 @@
           <h3 class="mb-4">Related Articles</h3>
           <div class="row g-4">
             <div class="col-md-6">
-              <div class="card glass h-100">
-                <div class="p-4">
+              <div class="card glass h-100 overflow-hidden">
+                <img src="assets/images/hearing_aid.png" class="card-img-top" alt="Maintaining Your Hearing Aids"
+                  style="object-fit: cover; height: 200px; width: 100%;">
+                <div class="p-4 d-flex flex-column flex-grow-1">
                   <h4 class="h5 fw-bold mb-2">Maintaining Your Hearing Aids</h4>
                   <p class="text-muted mb-3">Simple daily routines to keep your devices working optimally.</p>
-                  <a href="blog-details.html" class="text-primary fw-bold text-decoration-none">Read →</a>
+                  <div class="mt-auto text-center">
+                    <a href="blog-details.html" class="text-primary fw-bold text-decoration-none">Read →</a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card glass h-100">
-                <div class="p-4">
+              <div class="card glass h-100 overflow-hidden">
+                <img src="assets/images/patient_consultation.png" class="card-img-top" alt="Living Well with Tinnitus"
+                  style="object-fit: cover; height: 200px; width: 100%;">
+                <div class="p-4 d-flex flex-column flex-grow-1">
                   <h4 class="h5 fw-bold mb-2">Living Well with Tinnitus</h4>
                   <p class="text-muted mb-3">Evidence-based strategies to manage tinnitus.</p>
-                  <a href="blog-details.html" class="text-primary fw-bold text-decoration-none">Read →</a>
+                  <div class="mt-auto text-center">
+                    <a href="blog-details.html" class="text-primary fw-bold text-decoration-none">Read →</a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -81,38 +81,38 @@ function initBackToTop() {
 function initLightbox() {
   const modal = document.getElementById('lightbox-modal');
   if (!modal) return;
-  
+
   const modalImg = document.getElementById('lightbox-image');
   const modalCaption = document.getElementById('lightbox-caption');
   const closeBtn = document.getElementById('lightbox-close');
-  
+
   const galleryItems = document.querySelectorAll('.gallery-item');
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
       const img = item.querySelector('img');
       const largeSrc = item.getAttribute('data-lightbox-src') || (img ? img.src : '');
       const captionText = item.getAttribute('data-lightbox-caption') || (img ? img.alt : '');
-      
+
       if (modalImg) modalImg.src = largeSrc;
       if (modalCaption) modalCaption.textContent = captionText;
-      
+
       modal.classList.add('show');
       document.body.style.overflow = 'hidden'; // prevent scrolling behind
     });
   });
-  
+
   const closeModal = () => {
     modal.classList.remove('show');
     document.body.style.overflow = '';
   };
-  
+
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', (e) => {
     if (e.target === modal || e.target.closest('.lightbox-close')) {
       closeModal();
     }
   });
-  
+
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('show')) {
       closeModal();
@@ -165,7 +165,7 @@ function initFormValidation() {
 
 function validateField(input) {
   const isValid = input.checkValidity();
-  
+
   if (isValid) {
     input.classList.remove('is-invalid');
     input.classList.add('is-valid');
@@ -175,7 +175,7 @@ function validateField(input) {
   } else {
     input.classList.remove('is-valid');
     input.classList.add('is-invalid');
-    
+
     // Create tooltip if it doesn't exist
     let tooltip = input.parentElement.querySelector('.invalid-tooltip');
     if (!tooltip) {

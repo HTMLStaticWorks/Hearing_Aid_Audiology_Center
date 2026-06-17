@@ -20,4 +20,14 @@ html[dir="rtl"] .text-start {
 html[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: .5rem !important; }
 html[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: .5rem !important; }
 
+/* Fix for Hamburger pushing in RTL */
+html[dir="rtl"] .ms-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+html[dir="rtl"] .me-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
 /* Add any additional RTL specific overrides here */

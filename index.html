@@ -100,7 +100,6 @@
         </ul>
         <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0 header-actions">
           <a href="login.html" class="btn btn-secondary">Login</a>
-          <a href="contact.html" class="btn btn-primary">Book Now</a>
           <button class="btn btn-link icon-btn m-0" id="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
           <button class="btn btn-link icon-btn m-0" id="rtl-toggle" aria-label="Toggle RTL">↔️</button>
         </div>
@@ -113,8 +112,7 @@
       style="background: linear-gradient(135deg, var(--primary), var(--secondary)); min-height:80vh; padding: 3rem 0; display: flex; align-items: center;">
       <div class="container">
         <div class="row align-items-center justify-content-between">
-          <div
-            class="hero-content col-md-8 col-lg-7 d-flex flex-column align-items-center text-center mx-auto mx-md-0 pe-md-4">
+          <div class="hero-content col-lg-7 d-flex flex-column align-items-center text-center mx-auto pe-lg-4">
             <h1 class="hero-title display-4 fw-bold">Better Hearing Starts Here</h1>
             <p class="lead hero-lead">Discover personalized solutions for hearing loss and tinnitus.</p>
             <div class="cta-buttons mt-3 d-flex justify-content-center gap-2">
@@ -122,7 +120,7 @@
               <a href="services.html" class="btn btn-secondary">Our Services</a>
             </div>
           </div>
-          <div class="col-md-4 col-lg-5 d-none d-md-block text-end">
+          <div class="col-lg-5 text-center text-lg-end mt-4 mt-lg-0">
             <img src="assets/images/hero.png" alt="Calm adult wearing a hearing aid" class="hero-image w-100"
               loading="lazy"
               style="border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); border: 1px solid rgba(255, 255, 255, 0.1); max-width: 420px; margin-left: auto;">
@@ -185,7 +183,7 @@
     <section class="services-overview container py-5">
       <h2 class="text-center mb-4">Our Services</h2>
       <div class="row g-4">
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card glass h-100">
             <div class="card-body text-center">
               <h3 class="card-title">Hearing Tests</h3>
@@ -194,7 +192,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card glass h-100">
             <div class="card-body text-center">
               <h3 class="card-title">Hearing Aids</h3>
@@ -203,7 +201,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
           <div class="card glass h-100">
             <div class="card-body text-center">
               <h3 class="card-title">Tinnitus Therapy</h3>
@@ -250,18 +248,6 @@
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"
-              style="filter: invert(1) grayscale(100%);"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"
-              style="filter: invert(1) grayscale(100%);"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </section>
@@ -365,11 +351,15 @@
               hearing. Schedule your risk-free, complimentary clinical consultation today with one of our certified
               specialists.</p>
 
-            <div class="d-flex flex-wrap gap-4 mt-4">
-              <a href="contact.html" class="btn btn-light btn-lg px-4 shadow-sm"
-                style="font-weight: 600; color: var(--primary);">Schedule Free Consultation</a>
-              <a href="services.html" class="btn btn-outline-light btn-lg px-4" style="font-weight: 600;">Explore Our
-                Services</a>
+            <div class="row g-3" style="max-width: 600px;">
+              <div class="col-sm-6">
+                <a href="contact.html" class="btn btn-light btn-lg shadow-sm w-100"
+                  style="font-weight: 600; color: var(--primary);">Schedule Free Consultation</a>
+              </div>
+              <div class="col-sm-6">
+                <a href="services.html" class="btn btn-outline-light btn-lg w-100" 
+                  style="font-weight: 600;">Explore Our Services</a>
+              </div>
             </div>
           </div>
 
@@ -415,7 +405,7 @@
                 </div>
                 <div class="col-sm-6">
                   <div class="small text-white-50">Email Us:</div>
-                  <div class="fw-bold" style="font-size: 0.95rem;">support@sonohearing.com</div>
+                  <div class="fw-bold text-break" style="font-size: 0.95rem; word-break: break-word;">support@sonohearing.com</div>
                 </div>
               </div>
             </div>

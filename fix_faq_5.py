@@ -1,68 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
+import sys
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ - Sono</title>
-  <meta name="description"
-    content="Answers to frequently asked questions about hearing care, diagnostics, hearing aid technology, and pricing at Sono.">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom Styles -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/dark-mode.css" rel="stylesheet" id="dark-mode-stylesheet" disabled>
-  <link href="assets/css/rtl.css" rel="stylesheet" id="rtl-stylesheet" disabled>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
+file_path = r'e:\OfficeDownloads_\MayJuneWebsite\Hearing_Aid_Audiology_Center\faq.html'
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
 
-<body>
-  <!-- Skip to Content Link (Accessibility) -->
-  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+start_tag = '<!-- FAQ Section Grid -->'
+end_tag = '<!-- Still Have Questions Callout -->'
 
-  <!-- Header -->
-  <header class="navbar navbar-expand-lg sticky-top bg-white bg-opacity-75">
-    <div class="container d-flex align-items-center">
-      <a href="index.html" class="logo">
-        <img src="assets/images/new_logo.png" alt="Sono Logo" class="logo-icon">
-        Sono
-      </a>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
-        aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <nav class="collapse navbar-collapse justify-content-end" id="nav-menu">
-        <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
-          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-        <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0 header-actions">
-          <a href="login.html" class="btn btn-secondary">Login</a>
-          <button class="btn btn-link icon-btn m-0" id="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
-          <button class="btn btn-link icon-btn m-0" id="rtl-toggle" aria-label="Toggle RTL">↔️</button>
-        </div>
-      </nav>
-    </div>
-  </header>
+start_idx = content.find(start_tag)
+end_idx = content.find(end_tag)
 
-  <main id="main-content">
-    <!-- Hero Section -->
-    <section class="container py-5 text-center">
-      <span class="text-primary fw-bold text-uppercase tracking-wider" style="font-size: 0.85rem;">Got Questions?</span>
-      <h1 class="mt-2 display-4 fw-bold mb-3">Frequently Asked Questions</h1>
-      <p class="lead text-muted mx-auto" style="max-width: 600px;">Find detailed answers to common inquiries about our
-        clinic, diagnostic evaluations, hearing aid technology, and care plans.</p>
-    </section>
-
-    <!-- FAQ Section Grid -->
+if start_idx != -1 and end_idx != -1:
+    new_grid = """<!-- FAQ Section Grid -->
     <section class="py-5 bg-light">
       <div class="container">
         <div class="row g-4 justify-content-center">
@@ -328,110 +277,12 @@
         </div>
       </div>
     </section>
+    """
     
-<!-- Still Have Questions Callout -->
-    <section class="py-5 text-white" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
-      <div class="container text-center">
-        <h2 class="h3 fw-bold text-white mb-3">Still have questions?</h2>
-        <p class="lead mb-4 text-white-50" style="opacity: 0.9;">Our audiology care team is here to guide you. Speak to
-          one of our friendly experts today.</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <a href="contact.html" class="btn btn-light btn-lg px-4 shadow-sm"
-            style="font-weight: 600; color: var(--primary);">Contact Support</a>
-          <a href="contact.html" class="btn btn-outline-light btn-lg px-4" style="font-weight: 600;">Schedule
-            Consultation</a>
-        </div>
-      </div>
-    </section>
-  </main>
+    content = content[:start_idx] + new_grid + "\n" + content[end_idx:]
 
-  <!-- Footer -->
-  <footer class="footer bg-light py-4 mt-auto">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-          <a href="index.html" class="logo">
-            <img src="assets/images/new_logo.png" alt="Sono Logo" class="logo-icon">
-            Sono
-          </a>
-          <p class="mt-2 text-muted" style="max-width: 320px;">
-            Premium hearing care clinic offering comprehensive diagnostic evaluations, state-of-the-art hearing devices,
-            and personalized tinnitus therapy.
-          </p>
-          <div class="d-flex gap-3 mt-3 social-icons">
-            <a href="#" class="social-icon" aria-label="Facebook">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
-              </svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="X (formerly Twitter)">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="Instagram">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-              </svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="LinkedIn">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="index.html" class="text-decoration-none">Home</a></li>
-            <li><a href="about.html" class="text-decoration-none">About</a></li>
-            <li><a href="services.html" class="text-decoration-none">Services</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h5>Resources</h5>
-          <ul class="list-unstyled">
-            <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
-            <li><a href="gallery.html" class="text-decoration-none">Gallery</a></li>
-            <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-          <h5>Stay Updated</h5>
-          <p class="text-muted" style="font-size: 0.9rem; max-width: 320px;">
-            Subscribe to our newsletter for the latest hearing health tips, news, and exclusive updates.
-          </p>
-          <form action="https://formspree.io/f/your-form-id" method="POST" class="d-flex gap-2">
-            <input type="email" name="email" placeholder="Your email address" required aria-label="Email address"
-              class="form-control" style="font-size: 0.9rem; padding: 0.6rem 1rem;">
-            <button type="submit" class="btn btn-secondary"
-              style="padding: 0.6rem 1.2rem; font-size: 0.9rem; white-space: nowrap;">Subscribe</button>
-          </form>
-        </div>
-      </div>
-      <div class="bottom-bar text-center mt-3">
-        <p class="mb-0">&copy; 2026 Sono. All rights reserved.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#" class="text-decoration-none">Privacy Policy</a></li>
-          <li class="list-inline-item"><a href="#" class="text-decoration-none">Terms of Service</a></li>
-        </ul>
-      </div>
-      <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-      </button>
-    </div>
-  </footer>
-
-  <!-- Bootstrap Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-
-</html>
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(content)
+    print("Done!")
+else:
+    print("Could not find start or end tags.")
