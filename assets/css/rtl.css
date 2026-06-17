@@ -31,3 +31,20 @@ html[dir="rtl"] .me-auto {
 }
 
 /* Add any additional RTL specific overrides here */
+
+/* Fix floating toggles position in RTL */
+html[dir="rtl"] .floating-toggles {
+  right: auto !important;
+  left: 1.5rem !important;
+}
+
+/* Fix password eye toggle position and padding in RTL */
+html[dir="rtl"] .password-toggle-btn {
+  right: auto !important;
+  left: 1rem !important;
+}
+
+html[dir="rtl"] .password-wrapper input {
+  padding-right: 1rem !important;
+  padding-left: 3rem !important;
+}

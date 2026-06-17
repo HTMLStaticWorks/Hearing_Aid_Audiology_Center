@@ -107,23 +107,54 @@
     </div>
   </header>
   <main id="main-content">
-    <!-- Hero Section (Home‑1) -->
-    <section class="hero text-white"
-      style="background: linear-gradient(135deg, var(--primary), var(--secondary)); min-height:80vh; padding: 3rem 0; display: flex; align-items: center;">
+    <!-- Hero: Premium Split Layout (Home 1) -->
+    <section class="home2-hero">
       <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="hero-content col-lg-7 d-flex flex-column align-items-center text-center mx-auto pe-lg-4">
-            <h1 class="hero-title display-4 fw-bold">Better Hearing Starts Here</h1>
-            <p class="lead hero-lead">Discover personalized solutions for hearing loss and tinnitus.</p>
-            <div class="cta-buttons mt-3 d-flex justify-content-center gap-2">
+        <div class="home2-hero-grid">
+          <!-- Left: Text Content -->
+          <div class="home2-hero-content">
+            <span class="home2-hero-badge">✦ Trusted Hearing Care</span>
+            <h1 class="home2-hero-title">Better Hearing<br><span class="home2-hero-accent">Starts Here</span></h1>
+            <p class="home2-hero-desc">Discover personalized solutions for hearing loss and tinnitus.</p>
+            <div class="home2-hero-cta">
               <a href="contact.html" class="btn btn-primary">Book Appointment</a>
               <a href="services.html" class="btn btn-secondary">Our Services</a>
             </div>
+            <!-- Trust Stats -->
+            <div class="home2-hero-stats">
+              <div class="home2-hero-stat">
+                <span class="home2-hero-stat-number">10K+</span>
+                <span class="home2-hero-stat-label">Patients Served</span>
+              </div>
+              <div class="home2-hero-stat-divider"></div>
+              <div class="home2-hero-stat">
+                <span class="home2-hero-stat-number">95%</span>
+                <span class="home2-hero-stat-label">Satisfaction</span>
+              </div>
+              <div class="home2-hero-stat-divider"></div>
+              <div class="home2-hero-stat">
+                <span class="home2-hero-stat-number">15+</span>
+                <span class="home2-hero-stat-label">Years Exp.</span>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-5 text-center text-lg-end mt-4 mt-lg-0">
-            <img src="assets/images/hero.png" alt="Calm adult wearing a hearing aid" class="hero-image w-100"
-              loading="lazy"
-              style="border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); border: 1px solid rgba(255, 255, 255, 0.1); max-width: 420px; margin-left: auto;">
+          <!-- Right: Image -->
+          <div class="home2-hero-image-wrap">
+            <div class="home2-hero-image-container">
+              <img src="assets/images/hero.png" alt="Calm adult wearing a hearing aid" class="home2-hero-img"
+                loading="lazy">
+              <!-- Floating card -->
+              <div class="home2-hero-float-card">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 12 2 2 4-4" />
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+                <span>Personalized Care</span>
+              </div>
+            </div>
+            <!-- Decorative glow -->
+            <div class="home2-hero-glow"></div>
           </div>
         </div>
       </div>
@@ -247,7 +278,34 @@
                 <div class="testimonial-role">Tinnitus Therapy Patient</div>
               </div>
             </div>
+            <div class="carousel-item">
+              <div class="testimonial-card">
+                <img src="assets/images/john_doe.png" alt="John Doe" class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">“The adjustment period was so easy with their support. Now I can participate in family dinners without straining.”</p>
+                <div class="testimonial-author">John Doe</div>
+                <div class="testimonial-role">Hearing Aid User</div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-card">
+                <img src="assets/images/emily_lee.png" alt="Emily Lee" class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">“As a musician, preserving my hearing is crucial. The custom ear protection and advice they provided is second to none.”</p>
+                <div class="testimonial-author">Emily Lee</div>
+                <div class="testimonial-role">Musician</div>
+              </div>
+            </div>
           </div>
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </section>
@@ -352,12 +410,12 @@
               specialists.</p>
 
             <div class="row g-3" style="max-width: 600px;">
-              <div class="col-sm-6">
-                <a href="contact.html" class="btn btn-light btn-lg shadow-sm w-100"
+              <div class="col-sm-6 d-flex">
+                <a href="contact.html" class="btn btn-light btn-lg shadow-sm w-100 d-flex align-items-center justify-content-center"
                   style="font-weight: 600; color: var(--primary);">Schedule Free Consultation</a>
               </div>
-              <div class="col-sm-6">
-                <a href="services.html" class="btn btn-outline-light btn-lg w-100" 
+              <div class="col-sm-6 d-flex">
+                <a href="services.html" class="btn btn-outline-light btn-lg w-100 d-flex align-items-center justify-content-center" 
                   style="font-weight: 600;">Explore Our Services</a>
               </div>
             </div>
@@ -370,20 +428,20 @@
               <ul class="list-unstyled mb-4">
                 <li class="mb-2 d-flex align-items-center gap-2">
                   <span
-                    class="text-white bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center"
-                    style="width: 20px; height: 20px; font-size: 0.75rem;">✓</span>
+                    class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 20px; height: 20px; font-size: 0.75rem; background: #ffffff; color: var(--primary); font-weight: bold;">✓</span>
                   Comprehensive Audiology & Ear Evaluation
                 </li>
                 <li class="mb-2 d-flex align-items-center gap-2">
                   <span
-                    class="text-white bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center"
-                    style="width: 20px; height: 20px; font-size: 0.75rem;">✓</span>
+                    class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 20px; height: 20px; font-size: 0.75rem; background: #ffffff; color: var(--primary); font-weight: bold;">✓</span>
                   Live Demonstration of Latest Hearing Devices
                 </li>
                 <li class="mb-2 d-flex align-items-center gap-2">
                   <span
-                    class="text-white bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center"
-                    style="width: 20px; height: 20px; font-size: 0.75rem;">✓</span>
+                    class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 20px; height: 20px; font-size: 0.75rem; background: #ffffff; color: var(--primary); font-weight: bold;">✓</span>
                   Personalized Treatment Plan & Pricing Guide
                 </li>
               </ul>
