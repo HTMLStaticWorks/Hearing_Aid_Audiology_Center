@@ -926,6 +926,19 @@ section[style*="background:var(--primary)"] {
   .contact-container {
     grid-template-columns: 1fr;
     gap: 2rem;
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .contact-container > * {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-container .btn {
+    white-space: normal !important;
   }
 }
 
@@ -3011,7 +3024,16 @@ button.fw-bold,
     text-align: center;
   }
 
+  .container {
+    width: 95% !important;
+    padding: 1rem 0.5rem !important;
+  }
+
   /* Auth Page Mobile Optimizations */
+  .auth-page-wrapper {
+    padding-top: 5.5rem !important;
+  }
+
   .auth-card {
     padding: 2rem 1.25rem !important;
   }
