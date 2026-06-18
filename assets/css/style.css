@@ -943,7 +943,7 @@ section[style*="background:var(--primary)"] {
     margin: 2rem auto;
   }
 
-  .contact-container > * {
+  .contact-container>* {
     width: 100%;
     max-width: 600px;
     margin-left: auto;
@@ -1256,6 +1256,7 @@ section[style*="background:var(--primary)"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.5s ease;
 }
 
@@ -1435,7 +1436,7 @@ section[style*="background:var(--primary)"] {
   align-items: start;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .ba-showcase-grid {
     grid-template-columns: 1fr;
   }
@@ -1459,7 +1460,7 @@ section[style*="background:var(--primary)"] {
 .ba-slider-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1022 / 818;
   overflow: hidden;
   cursor: ew-resize;
   user-select: none;
@@ -1473,8 +1474,15 @@ section[style*="background:var(--primary)"] {
 .ba-image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
+}
+
+.ba-before img {
+  object-position: left center;
+}
+
+.ba-after img {
+  object-position: right center;
 }
 
 .ba-before {
@@ -2010,7 +2018,7 @@ section[style*="background:var(--primary)"] {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
-  
+
   /* If there's an odd number of cards, center the last one */
   .tech-features-panel .tech-feature-card:last-child:nth-child(odd) {
     grid-column: span 2;
@@ -3078,24 +3086,36 @@ button.fw-bold,
 
 /* --- Home 2 Enhanced Hero Override (Swapped Image & Text Layout with Dark Theme styling) --- */
 .home2-hero-enhanced {
-  background: radial-gradient(circle at 75% 75%, rgba(13, 148, 136, 0.25), transparent 50%),
-    radial-gradient(circle at 25% 25%, rgba(37, 99, 235, 0.25), transparent 50%),
-    #090d16 !important;
-  color: #ffffff !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: radial-gradient(circle at 75% 75%, rgba(13, 148, 136, 0.08), transparent 50%),
+    radial-gradient(circle at 25% 25%, rgba(37, 99, 235, 0.08), transparent 50%),
+    var(--bg-light) !important;
+  color: var(--text) !important;
+  border-bottom: 1px solid var(--card-border);
 }
 
 [data-theme="dark"] .home2-hero-enhanced {
   background: radial-gradient(circle at 75% 75%, rgba(13, 148, 136, 0.3), transparent 50%),
     radial-gradient(circle at 25% 25%, rgba(37, 99, 235, 0.3), transparent 50%),
     #05080f !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .home2-hero-enhanced .home2-hero-title {
+  color: var(--text) !important;
+}
+
+[data-theme="dark"] .home2-hero-enhanced .home2-hero-title {
   color: #ffffff !important;
 }
 
 .home2-hero-enhanced .home2-hero-title .home2-hero-accent {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="dark"] .home2-hero-enhanced .home2-hero-title .home2-hero-accent {
   background: linear-gradient(135deg, #0df5e3, #38bdf8);
   -webkit-background-clip: text;
   background-clip: text;
@@ -3103,10 +3123,20 @@ button.fw-bold,
 }
 
 .home2-hero-enhanced .home2-hero-desc {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .home2-hero-enhanced .home2-hero-desc {
   color: #94a3b8 !important;
 }
 
 .home2-hero-enhanced .home2-hero-badge {
+  background: rgba(var(--primary-rgb), 0.1) !important;
+  color: var(--primary) !important;
+  border-color: rgba(var(--primary-rgb), 0.25) !important;
+}
+
+[data-theme="dark"] .home2-hero-enhanced .home2-hero-badge {
   background: rgba(13, 148, 136, 0.15) !important;
   color: #0df5e3 !important;
   border-color: rgba(13, 148, 136, 0.3) !important;
@@ -3116,17 +3146,25 @@ button.fw-bold,
 .home2-hero-enhanced .btn-glow {
   background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
   color: #ffffff !important;
-  box-shadow: 0 0 15px rgba(13, 148, 136, 0.4) !important;
+  box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.3) !important;
   border: none !important;
 }
 
 .home2-hero-enhanced .btn-glow:hover {
-  box-shadow: 0 0 25px rgba(13, 148, 136, 0.6) !important;
+  box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.45) !important;
   transform: translateY(-2px);
 }
 
+[data-theme="dark"] .home2-hero-enhanced .btn-glow {
+  box-shadow: 0 0 15px rgba(13, 148, 136, 0.4) !important;
+}
+
+[data-theme="dark"] .home2-hero-enhanced .btn-glow:hover {
+  box-shadow: 0 0 25px rgba(13, 148, 136, 0.6) !important;
+}
+
 .home2-hero-enhanced .link-btn-text {
-  color: #0df5e3 !important;
+  color: var(--primary) !important;
   font-weight: 600;
   text-decoration: none;
   display: inline-flex;
@@ -3136,8 +3174,16 @@ button.fw-bold,
 }
 
 .home2-hero-enhanced .link-btn-text:hover {
-  color: #ffffff !important;
+  color: var(--secondary) !important;
   transform: translateX(4px);
+}
+
+[data-theme="dark"] .home2-hero-enhanced .link-btn-text {
+  color: #0df5e3 !important;
+}
+
+[data-theme="dark"] .home2-hero-enhanced .link-btn-text:hover {
+  color: #ffffff !important;
 }
 
 /* Floating Cards Layout around image */
@@ -3164,38 +3210,74 @@ button.fw-bold,
 
 /* Animations for floating cards */
 @keyframes floatCard1 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes floatCard2 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 @keyframes floatCard3 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .home2-hero-enhanced .home2-hero-float-card {
-  background: rgba(15, 23, 42, 0.85) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  color: var(--text) !important;
   padding: 0.6rem 1.1rem !important;
   border-radius: 12px !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.home2-hero-enhanced .home2-hero-float-card span {
+[data-theme="dark"] .home2-hero-enhanced .home2-hero-float-card {
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
   color: #ffffff !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+.home2-hero-enhanced .home2-hero-float-card span {
+  color: var(--text) !important;
   font-size: 0.85rem !important;
 }
 
+[data-theme="dark"] .home2-hero-enhanced .home2-hero-float-card span {
+  color: #ffffff !important;
+}
+
 .home2-hero-enhanced .home2-hero-float-card svg {
+  stroke: var(--primary) !important;
+}
+
+[data-theme="dark"] .home2-hero-enhanced .home2-hero-float-card svg {
   stroke: #0df5e3 !important;
 }
 
@@ -3215,9 +3297,9 @@ button.fw-bold,
 }
 
 .home2-stat-badge {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  color: var(--text) !important;
   padding: 0.5rem 1rem !important;
   border-radius: 50px !important;
   display: inline-flex;
@@ -3227,8 +3309,15 @@ button.fw-bold,
   font-weight: 500;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   animation: floatBadge 3s ease-in-out infinite;
+}
+
+[data-theme="dark"] .home2-stat-badge {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
 }
 
 .home2-stat-badge:nth-child(2) {
@@ -3236,13 +3325,20 @@ button.fw-bold,
 }
 
 .home2-stat-badge svg {
+  stroke: var(--primary) !important;
+}
+
+[data-theme="dark"] .home2-stat-badge svg {
   stroke: #0df5e3 !important;
 }
 
 @keyframes floatBadge {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
@@ -3298,9 +3394,11 @@ button.fw-bold,
   #testimonialCarousel {
     padding: 0 15px;
   }
+
   #testimonialCarousel .carousel-control-prev {
     left: -10px;
   }
+
   #testimonialCarousel .carousel-control-next {
     right: -10px;
   }
@@ -3402,13 +3500,15 @@ button.fw-bold,
 
 @media (min-width: 768px) {
   .faq-card-img {
-    height: 260px; /* Slightly taller for tablet view */
+    height: 260px;
+    /* Slightly taller for tablet view */
   }
 }
 
 @media (min-width: 1024px) {
   .faq-card-img {
-    height: 300px; /* Even taller for desktop/1024px+ views so faces aren't cropped */
+    height: 300px;
+    /* Even taller for desktop/1024px+ views so faces aren't cropped */
   }
 }
 
